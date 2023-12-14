@@ -20,7 +20,7 @@ public class FootballController {
         this.footballService = footballService;
     }
 
-    @GetMapping("/fetch_drawn_matches")
+    @GetMapping("/fetch_draw_matches")
     public ResponseEntity<Integer> getDrawnMatchesCountForYear(@RequestParam int year) throws Exception {
         try {
             int drawnMatchesCount = footballService.getDrawnMatchesCountWithoutDelay(year);
@@ -31,7 +31,7 @@ public class FootballController {
 
     }
 
-    @GetMapping("/fetch_drawn_matches_With_delay")
+    @GetMapping("/fetch_draw_matches_With_delay")
     public ResponseEntity<Integer> getDrawnMatchesCountForYearWithDelay(@RequestParam int year) throws Exception {
         try {
             int drawnMatchesCount = footballService.getDrawnMatchesCountWithDelay(year);

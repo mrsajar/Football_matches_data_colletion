@@ -34,6 +34,7 @@ public class FootballService {
         String url = "https://jsonmock.hackerrank.com/api/football_matches?year=" + year + "&page=1";
         ResponseEntity<FootballApiResponses> responseEntity = restTemplate.getForEntity(url, FootballApiResponses.class);
 
+        // Simulate a random delay between 3 to 6 seconds
         try {
             Thread.sleep((long) (3000 + Math.random() * 3000));
         } catch (InterruptedException e) {
